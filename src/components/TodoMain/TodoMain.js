@@ -103,7 +103,7 @@ export default function TodoMain() {
               style={delAll ? { backgroundColor: 'orangered' } : {}}
               onClick={() => setDelAll(!delAll)}
             >
-              {!delAll ? 'Delete All' : 'Cancel'}
+              {!delAll ? 'Reset All App' : 'Cancel'}
             </button>
 
             {delAll && (
@@ -112,7 +112,7 @@ export default function TodoMain() {
                   className={styles.buttonDel}
                   onClick={() => localStorage.clear()}
                 >
-                  Confirm Deletion All
+                  Confirm Deletion All LISTS
                 </button>
               </form>
             )}

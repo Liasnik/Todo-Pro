@@ -6,9 +6,9 @@ export default function Menu() {
       <NavLink to="/Todo-Pro" end>
         Todo-Main
       </NavLink>
-      <NavLink to="todo2">Todo2</NavLink>
-      <NavLink to="todo3">Todo3</NavLink>
-      <NavLink to="todo4">Todo4</NavLink>
+      <NavLink to="todo2">List2</NavLink>
+      <NavLink to="todo3">List3</NavLink>
+      <NavLink to="todo4">List4</NavLink>
     </nav>
   )
 }

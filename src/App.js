@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Routes>
-          <Route path="/" element={<MainLayout />}>
+          <Route path="/Todo-Pro" element={<MainLayout />}>
             <Route index element={<TodoMain />} />
             <Route path="todo2" element={<TodoPage2 />} />
             <Route path="todo3" element={<TodoPage3 />} />

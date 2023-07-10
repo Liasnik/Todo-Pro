@@ -55,3 +55,7 @@
   display: flex;
   justify-content: center;
 }
+
+.todoEmpty {
+  color: rgb(137, 168, 170);
+}

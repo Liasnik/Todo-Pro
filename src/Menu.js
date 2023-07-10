@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 export default function Menu() {
   return (
     <nav className="nav">
-      <NavLink to="/" end>
+      <NavLink to="/Todo-Pro" end>
         Todo-Main
       </NavLink>
       <NavLink to="todo2">Todo2</NavLink>

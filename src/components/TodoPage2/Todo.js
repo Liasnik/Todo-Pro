@@ -17,7 +17,7 @@ function Todo({ todo, deleteTodo, doneHendler }) {
       />
       <FaCheck
         className={styles.checkIcon}
-        style={todo.done ? { color: 'green' } : ''}
+        style={todo.done ? { color: 'rgb(2, 168, 2)' } : ''}
         onClick={() => doneHendler(todo.id)}
       />
     </div>

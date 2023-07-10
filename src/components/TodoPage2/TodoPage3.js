@@ -57,7 +57,7 @@ export default function TodoPage3() {
   const countDone = todos.filter((todo) => todo.done === true).length
   return (
     <div className={styles.TodoFast}>
-      <h1>todo list </h1>
+      <h1>todo list 3</h1>
       <div className={styles.header}>
         <TodoForm addTodo={addTodoHandler} scrollDown={scrollDown} />
         {!!countDone && (

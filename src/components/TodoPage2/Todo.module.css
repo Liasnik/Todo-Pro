@@ -23,14 +23,14 @@
 
 .completedTodo {
   background-color: unset;
-  border-color: gray;
-  color: gray;
+  border-color: rgb(139, 138, 138);
+  color: rgb(154, 154, 154);
 }
 
 .todo.completedTodo .todoIcon,
 .todo.completedTodo .checkIcon,
 .todo.completedTodo .deleteIcon {
-  color: gray;
+  color: rgb(138, 138, 138);
 }
 
 .checkicon,
@@ -53,5 +53,5 @@
 }
 
 .checkIcon:hover {
-  color: green;
+  color: rgb(2, 168, 2);
 }

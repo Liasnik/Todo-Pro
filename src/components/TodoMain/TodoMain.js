@@ -128,7 +128,7 @@ export default function TodoMain() {
             </button>
           </>
         ) : (
-          <h2 style={{ color: 'rgb(88, 149, 152)' }}>Todo list is empty</h2>
+          <h2 className={styles.todoEmpty}>Todo list is empty</h2>
         )}
       </div>
     </div>

@@ -1,0 +1,18 @@
+.todosActionsContainer {
+  margin: 5px;
+  background-color: aquamarine;
+}
+
+.buttonDisable {
+  margin-left: 20px;
+  height: 50px;
+  background-color: rgb(215, 224, 225);
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+.clearIcon:hover {
+  color: red;
+}

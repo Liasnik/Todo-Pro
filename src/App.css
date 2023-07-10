@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+  background-color: rgb(55, 96, 98);
+}
+
+.active {
+  color: lightyellow;
+  text-decoration: none;
+}
+
+a {
+  color: rgb(145, 223, 248);
+  font-size: 18px;
+  text-decoration: none;
+}
+
+nav a {
+  margin: 15px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+nav {
+  padding: 10px;
+  background-color: darkslategrey;
+}

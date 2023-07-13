@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import { flushSync } from 'react-dom'
 import { v4 as uuidv4 } from 'uuid'
 import styles from './TodoPage2.module.css'
@@ -6,19 +6,14 @@ import TodoForm from './TodoForm'
 import TodoList from './TodoList'
 import TodosActions from './TodosActions'
 
-function storageTodo() {
-  const savedTodos = localStorage.getItem('todosPro2')
-  if (savedTodos) {
-    return JSON.parse(savedTodos)
-  }
-  return []
+function saveTodos(name, todos) {
+  localStorage.setItem(name, JSON.stringify(todos))
 }
 
-export default function TodoPage2() {
-  const [todos, setTodos] = useState(storageTodo())
+export default function TodoPage2({ todos, setTodos, storageName, name }) {
   const downRef = useRef(null)
 
-  localStorage.setItem('todosPro2', JSON.stringify(todos))
+  saveTodos(storageName, todos)
 
   const addTodoHandler = (text) => {
     const newTodo = {
@@ -57,7 +52,7 @@ export default function TodoPage2() {
   const countDone = todos.filter((todo) => todo.done === true).length
   return (
     <div className={styles.TodoFast}>
-      <h1>todo list 2</h1>
+      <h1>{name}</h1>
       <div className={styles.header}>
         <TodoForm addTodo={addTodoHandler} scrollDown={scrollDown} />
         {!!countDone && (

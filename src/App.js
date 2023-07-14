@@ -32,7 +32,7 @@ function App() {
                 <TodoPage2
                   todos={todos2}
                   setTodos={setTodos2}
-                  name={'todo list 2'}
+                  name={'list 2'}
                   storageName={'todosPro2'}
                 />
               }
@@ -43,7 +43,7 @@ function App() {
                 <TodoPage2
                   todos={todos3}
                   setTodos={setTodos3}
-                  name={'todo list 2'}
+                  name={'list 3'}
                   storageName={'todosPro3'}
                 />
               }
@@ -54,7 +54,7 @@ function App() {
                 <TodoPage2
                   todos={todos4}
                   setTodos={setTodos4}
-                  name={'todo list 4'}
+                  name={'list 4'}
                   storageName={'todosPro4'}
                 />
               }

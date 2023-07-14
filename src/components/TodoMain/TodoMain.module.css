@@ -46,16 +46,23 @@
 .buttonDel {
   margin: 10px;
   color: antiquewhite;
-  background-color: brown;
+  background-color: rgb(220, 16, 16);
   padding: 4px;
   font-size: medium;
+}
+
+.button:hover,
+.buttonDel:hover {
+  cursor: pointer;
 }
 
 .buttonDelBlock {
   display: flex;
   justify-content: center;
+  margin-bottom: 1px;
 }
 
 .todoEmpty {
+  margin-bottom: 20px;
   color: rgb(137, 168, 170);
 }

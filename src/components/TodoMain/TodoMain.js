@@ -31,6 +31,7 @@ export default function TodoMain() {
   const [todos, setTodos] = useState(loadTodos())
   const [nextId, setNextId] = useState(loadNextId())
   const [text, setText] = useState('')
+  const [clearAllList, setClearAllList] = useState(false)
   const [delAll, setDelAll] = useState(false)
   const inputRef = useRef(null)
   const addedRef = useRef(null)
@@ -38,13 +39,15 @@ export default function TodoMain() {
   saveTodos(todos)
   saveNextId(nextId)
 
-  function hendleAddTodo() {
+  function hendleAddTodo(e) {
+    e.preventDefault()
     setText('')
     const newTodo = {
       id: nextId,
       text: text,
       done: false,
     }
+
     flushSync(() => {
       setTodos([...todos, newTodo])
     })
@@ -75,7 +78,7 @@ export default function TodoMain() {
     <div className={styles.todoMain}>
       <div className={styles.header}>
         <h2 style={{ color: 'white' }}>Todo List</h2>
-        <form>
+        <form onSubmit={hendleAddTodo}>
           <input
             placeholder={'      Enter new todo #' + lastNumder}
             ref={inputRef}
@@ -84,13 +87,7 @@ export default function TodoMain() {
             onChange={onChange}
             value={text}
           />
-          <button
-            className={styles.button}
-            type="button"
-            onClick={hendleAddTodo}
-          >
-            Add
-          </button>
+          <button className={styles.button}>Add</button>
         </form>
       </div>
       <TodoList todos={todos} changeTodo={changeTodo} onDelete={onDelete} />
@@ -100,25 +97,30 @@ export default function TodoMain() {
           <>
             <button
               className={styles.buttonDel}
-              style={delAll ? { backgroundColor: 'orangered' } : {}}
-              onClick={() => setDelAll(!delAll)}
+              style={
+                clearAllList
+                  ? { backgroundColor: 'green' }
+                  : { backgroundColor: 'rgb(134, 89, 89)' }
+              }
+              onClick={() => setClearAllList(!clearAllList)}
             >
-              {!delAll ? 'Reset All App' : 'Cancel'}
+              {!clearAllList ? 'Clear List' : 'Cancel'}
             </button>
 
-            {delAll && (
-              <form>
-                <button
-                  className={styles.buttonDel}
-                  onClick={() => localStorage.clear()}
-                >
-                  Confirm Deletion All LISTS
-                </button>
-              </form>
+            {clearAllList && (
+              <button
+                title="Delete the list without the possibility of recovery"
+                className={styles.buttonDel}
+                onClick={() => setTodos([])}
+              >
+                Confirm Clear
+              </button>
             )}
+
             <button
+              title="Delete complited without the possibility of recovery"
               className={styles.buttonDel}
-              style={{ backgroundColor: 'orangered' }}
+              style={{ backgroundColor: 'rgb(134, 89, 89)' }}
               onClick={() => {
                 setTodos(todos.filter((todo) => todo.done !== true))
                 setDelAll(false)
@@ -129,6 +131,32 @@ export default function TodoMain() {
           </>
         ) : (
           <h2 className={styles.todoEmpty}>Todo list is empty</h2>
+        )}
+      </div>
+
+      <div>
+        <button
+          className={styles.buttonDel}
+          style={
+            delAll
+              ? { backgroundColor: 'green', marginBottom: '25px' }
+              : { backgroundColor: 'rgb(134, 89, 89)' }
+          }
+          onClick={() => setDelAll(!delAll)}
+        >
+          {!delAll ? 'Reset All App' : 'Cancel'}
+        </button>
+
+        {delAll && (
+          <form>
+            <button
+              title="Delete the data of the entire application without the possibility of recovery"
+              className={styles.buttonDel}
+              onClick={() => localStorage.clear()}
+            >
+              Confirm Reset All App
+            </button>
+          </form>
         )}
       </div>
     </div>

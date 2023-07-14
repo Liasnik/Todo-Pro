@@ -9,16 +9,21 @@ function Todo({ todo, deleteTodo, doneHendler }) {
       className={`${styles.todo} ${todo.done ? styles.completedTodo : ''}`}
       onDoubleClick={() => deleteTodo(todo.id)}
     >
-      <RiTodoFill className={styles.todoIcon} />
+      {todo.done ? (
+        <FaCheck
+          className={styles.checkIcon}
+          onClick={() => doneHendler(todo.id)}
+        />
+      ) : (
+        <RiTodoFill
+          className={styles.todoIcon}
+          onClick={() => doneHendler(todo.id)}
+        />
+      )}
       <div className={styles.todoText}>{todo.text}</div>
       <RiDeleteBin2Line
         className={styles.deleteIcon}
         onClick={() => deleteTodo(todo.id)}
-      />
-      <FaCheck
-        className={styles.checkIcon}
-        style={todo.done ? { color: 'rgb(2, 168, 2)' } : ''}
-        onClick={() => doneHendler(todo.id)}
       />
     </div>
   )

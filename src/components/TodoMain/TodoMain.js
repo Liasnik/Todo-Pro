@@ -111,7 +111,10 @@ export default function TodoMain() {
               <button
                 title="Delete the list without the possibility of recovery"
                 className={styles.buttonDel}
-                onClick={() => setTodos([])}
+                onClick={() => {
+                  setTodos([])
+                  setClearAllList(false)
+                }}
               >
                 Confirm Clear
               </button>

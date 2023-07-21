@@ -90,7 +90,12 @@ export default function TodoMain() {
           <button className={styles.button}>Add</button>
         </form>
       </div>
-      <TodoList todos={todos} changeTodo={changeTodo} onDelete={onDelete} />
+      <TodoList
+        todos={todos}
+        changeTodo={changeTodo}
+        onDelete={onDelete}
+        setTodos={setTodos}
+      />
 
       <div ref={addedRef} className={styles.buttonDelBlock}>
         {todos.length > 0 ? (

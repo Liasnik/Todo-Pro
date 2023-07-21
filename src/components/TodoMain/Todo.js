@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import styles from './Todo.module.css'
+import { Reorder } from 'framer-motion'
 
 function Todo({ index, todo, changeTodo, onDelete }) {
   const [isEdit, setIsEdit] = useState(false)
@@ -79,7 +80,11 @@ function Todo({ index, todo, changeTodo, onDelete }) {
         </>
       ))
 
-  return <div className={styles.listItem}>{todoContent}</div>
+  return (
+    <Reorder.Item as="div" value={todo} className={styles.listItem}>
+      {todoContent}
+    </Reorder.Item>
+  )
 }
 
 export default Todo

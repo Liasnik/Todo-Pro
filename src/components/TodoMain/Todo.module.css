@@ -19,7 +19,7 @@
   background-color: rgb(175, 201, 202);
   padding: 2px 10px;
   margin: 0 5px 0 10px;
-  font-size: larger;
+  font-size: x-large;
   border-style: none;
   border-radius: 6px;
   outline-style: none;
@@ -72,7 +72,7 @@
 
 .listItem {
   width: 94%;
-  margin: 3px;
+  margin: 5px;
   background-color: rgb(175, 201, 202);
   border-radius: 6px;
 }

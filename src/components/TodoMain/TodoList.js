@@ -1,9 +1,15 @@
+import { Reorder } from 'framer-motion'
 import Todo from './Todo'
 import styles from './TodoList.module.css'
 
-export default function TodoList({ todos, changeTodo, onDelete }) {
+export default function TodoList({ todos, setTodos, changeTodo, onDelete }) {
   return (
-    <div className={styles.list}>
+    <Reorder.Group
+      axis="y"
+      values={todos}
+      onReorder={setTodos}
+      className={styles.list}
+    >
       {todos.map((t, index) => (
         <div key={t.id} style={{ display: 'flex' }}>
           <Todo
@@ -14,6 +20,6 @@ export default function TodoList({ todos, changeTodo, onDelete }) {
           />
         </div>
       ))}
-    </div>
+    </Reorder.Group>
   )
 }

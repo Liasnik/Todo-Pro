@@ -79,7 +79,7 @@ function Todo({ index, todo, changeTodo, onDelete }) {
         </>
       ))
 
-  return <div>{todoContent}</div>
+  return <div className={styles.listItem}>{todoContent}</div>
 }
 
 export default Todo

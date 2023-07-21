@@ -5,7 +5,6 @@ import TodoMain from './components/TodoMain/TodoMain'
 import MainLayout from './layouts/MainLayout'
 import NotFound from './components/NotFound'
 import TodoPage2 from './components/TodoPage2/TodoPage2'
-// import TodoPage8 from './components/TodoPage2/TodoPage8'
 
 function loadTodos(name) {
   const savedTodos = localStorage.getItem(name)

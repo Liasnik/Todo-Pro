@@ -14,11 +14,11 @@
 
 .todo {
   overflow: hidden;
-  width: 67%;
-  height: 30px;
-  background-color: rgb(215, 227, 250);
+  width: 64%;
+  height: 43px;
+  background-color: rgb(175, 201, 202);
   padding: 2px 10px;
-  margin: 10px 10px;
+  margin: 0 5px 0 10px;
   font-size: larger;
   border-style: none;
   border-radius: 6px;
@@ -68,4 +68,11 @@
 .button,
 .buttonDel:hover {
   cursor: pointer;
+}
+
+.listItem {
+  width: 94%;
+  margin: 3px;
+  background-color: rgb(175, 201, 202);
+  border-radius: 6px;
 }

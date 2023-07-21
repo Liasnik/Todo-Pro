@@ -77,7 +77,7 @@ export default function TodoMain() {
   return (
     <div className={styles.todoMain}>
       <div className={styles.header}>
-        <h2 style={{ color: 'white' }}>Todo List</h2>
+        <h2 style={{ color: 'white' }}>List 1</h2>
         <form onSubmit={hendleAddTodo}>
           <input
             placeholder={'      Enter new todo #' + lastNumder}
@@ -136,7 +136,6 @@ export default function TodoMain() {
           <h2 className={styles.todoEmpty}>Todo list is empty</h2>
         )}
       </div>
-
       <div>
         <button
           className={styles.buttonDel}

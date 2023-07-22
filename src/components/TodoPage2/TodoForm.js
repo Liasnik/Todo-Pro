@@ -20,7 +20,7 @@ export default function TodoForm({ addTodo, scrollDown }) {
           value={text}
         />
         <Button type="submit" title="Submit" onClick={scrollDown}>
-          Submit
+          Add
         </Button>
       </form>
     </div>

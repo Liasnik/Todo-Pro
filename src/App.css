@@ -1,6 +1,8 @@
 .App {
   text-align: center;
   background-color: rgb(55, 96, 98);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .active {

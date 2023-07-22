@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
-import styles from './Todo.module.css'
 import { Reorder } from 'framer-motion'
+import styles from './Todo.module.css'
 
 function Todo({ index, todo, changeTodo, onDelete }) {
   const [isEdit, setIsEdit] = useState(false)

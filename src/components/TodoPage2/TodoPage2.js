@@ -64,6 +64,7 @@ export default function TodoPage2({ todos, setTodos, storageName, name }) {
       <div className={styles.body}>
         <TodoList
           todos={todos}
+          setTodos={setTodos}
           deleteTodo={deleteTodo}
           doneHendler={doneToggleHendler}
         />

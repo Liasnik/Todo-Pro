@@ -5,6 +5,7 @@ import styles from './TodoList.module.css'
 export default function TodoList({ todos, setTodos, changeTodo, onDelete }) {
   return (
     <Reorder.Group
+      as="div"
       axis="y"
       values={todos}
       onReorder={setTodos}

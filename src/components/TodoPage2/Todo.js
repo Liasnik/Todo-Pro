@@ -1,11 +1,14 @@
 // import { useState, useRef, useEffect } from 'react'
 import { RiTodoFill, RiDeleteBin2Line } from 'react-icons/ri'
+import { Reorder } from 'framer-motion'
 import { FaCheck } from 'react-icons/fa'
 import styles from './Todo.module.css'
 
 function Todo({ todo, deleteTodo, doneHendler }) {
   return (
-    <div
+    <Reorder.Item
+      as="div"
+      value={todo}
       className={`${styles.todo} ${todo.done ? styles.completedTodo : ''}`}
       onDoubleClick={() => deleteTodo(todo.id)}
     >
@@ -25,7 +28,7 @@ function Todo({ todo, deleteTodo, doneHendler }) {
         className={styles.deleteIcon}
         onClick={() => deleteTodo(todo.id)}
       />
-    </div>
+    </Reorder.Item>
   )
 }
 

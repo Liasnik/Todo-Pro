@@ -4,7 +4,7 @@ import { Reorder } from 'framer-motion'
 import { FaCheck } from 'react-icons/fa'
 import styles from './Todo.module.css'
 
-function Todo({ todo, deleteTodo, doneHendler }) {
+function Todo({ todo, deleteTodo, doneHandler }) {
   return (
     <Reorder.Item
       as="div"
@@ -15,12 +15,12 @@ function Todo({ todo, deleteTodo, doneHendler }) {
       {todo.done ? (
         <FaCheck
           className={styles.checkIcon}
-          onClick={() => doneHendler(todo.id)}
+          onClick={() => doneHandler(todo.id)}
         />
       ) : (
         <RiTodoFill
           className={styles.todoIcon}
-          onClick={() => doneHendler(todo.id)}
+          onClick={() => doneHandler(todo.id)}
         />
       )}
       <div className={styles.todoText}>{todo.text}</div>

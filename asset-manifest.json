@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Todo-Pro/static/css/main.9376d5c4.css",
-    "main.js": "/Todo-Pro/static/js/main.e2a7b9fa.js",
+    "main.css": "/Todo-Pro/static/css/main.7d481642.css",
+    "main.js": "/Todo-Pro/static/js/main.d59e7681.js",
     "index.html": "/Todo-Pro/index.html",
-    "main.9376d5c4.css.map": "/Todo-Pro/static/css/main.9376d5c4.css.map",
-    "main.e2a7b9fa.js.map": "/Todo-Pro/static/js/main.e2a7b9fa.js.map"
+    "main.7d481642.css.map": "/Todo-Pro/static/css/main.7d481642.css.map",
+    "main.d59e7681.js.map": "/Todo-Pro/static/js/main.d59e7681.js.map"
   },
   "entrypoints": [
-    "static/css/main.9376d5c4.css",
-    "static/js/main.e2a7b9fa.js"
+    "static/css/main.7d481642.css",
+    "static/js/main.d59e7681.js"
   ]
 }
